@@ -1,29 +1,16 @@
-# Project: Interactive Mouse Controller
+# Úmit – Устройство для управления
 
-This project allows controlling a computer's mouse via magnetometer data received over a UDP connection from an Arduino device. The system includes both a **Python script** (for mouse control on the computer) and an **Arduino sketch** (for collecting magnetometer data).
+**Úmit** — это устройство, позволяющее контролировать различные устройства с помощью движений головы и языка. Оно предназначено для пользователей, которым требуется альтернативный способ взаимодействия с техникой.
 
-## 📂 Project Structure
-- `/python-code/`  
-    - `main.py` - Python script that listens for UDP data and controls the mouse movement based on magnetometer values.
-- `/arduino-code/`  
-    - `umit.ino` - Arduino sketch that collects accelerometer, gyroscope, and magnetometer data and sends it over UDP.
+## 📂 Структура репозитория
 
-## 🚀 How to Run
+- `/python-code/` – Программный код для управления курсором с помощью сенсорных данных.
+- `/arduino-code/` – Программный код для работы с датчиками и отправки данных через сеть.
+- `README.md` – Описание проекта.
 
-### 1. **Python Code**:
-   - Install required libraries:
-     ```bash
-     pip install pynput
-     ```
-   - Run the script:
-     ```bash
-     python python-code/main.py
-     ```
+## 🚀 Как запустить
 
-### 2. **Arduino Code**:
-   - Upload the `umit.ino` sketch to your **Arduino** board using the **Arduino IDE**.
-   - The Arduino will start collecting sensor data and send it over UDP to the Python script.
-
-## 📜 License
-This project is distributed under the **MIT License**.
-
+### 1. Запуск программного кода для ПК
+1. Установите необходимые библиотеки:
+   ```bash
+   pip install -r python-code/requirements.txt
